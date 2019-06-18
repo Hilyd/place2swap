@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+{% endblock %}
+{% block body %}
+    <section>
+        <h2>{{ article.title}}</h2>
+        <article class="description">
+            <ul>
+                <li>auteur: {{ article.author }}</li>
+                <li>date: {{ article.date }}</li>
+            </ul>
+            {{ article.description }}
+            <img src="{{ asset('assets/uploads/images/' ~ article.image) }}" alt="illustration de l'article">
+
+        </article>
+
+    </section>
+
+{% endblock %}

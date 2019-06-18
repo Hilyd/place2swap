@@ -1,0 +1,9 @@
+parameters:
+
+    elastic_host: 'localhost'
+
+    elastic_port: '9200'
+
+    elastic_index: 'place2swap'
+
+    elastic_type: '_doc'

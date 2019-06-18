@@ -1,0 +1,33 @@
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "description": {
+          "type": "text"
+        },
+        "date": {
+          "type": "date",
+          "format": "yyyy-MM-dd||yyyy-MM||yyyy||epoch_millis"
+        },
+        "author": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 64
+            }
+          }
+        },
+        "title": {
+          "type": "text"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "1",
+      "number_of_replicas": "0"
+    }
+  }
+}
